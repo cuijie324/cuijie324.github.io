@@ -87,25 +87,17 @@
 
 
 
-<meta name="description" content="Express里中间件是按照程序里书写顺序执行的。
-今天新建了一个Express程序，添加express-session中间件后，遇到req.session一直是undefined的情况。
-最后发现session中间件写在了路由之后，导致在处理处理时，session还没处理。
-另外，静态文件中间件在路由之前的话，如果public目录下有index.html，在请求/时就直接返回这个文件了，而不会到">
+<meta name="description" content="Express里中间件是按照程序里书写顺序执行的。 今天新建了一个Express程序，添加express-session中间件后，遇到req.session一直是undefined的情况。 最后发现session中间件写在了路由之后，导致在处理处理时，session还没处理。 另外，静态文件中间件在路由之前的话，如果public目录下有index.html，在请求/时就直接返回这个文件了，而不会到">
+<meta name="keywords" content="Node.js,Express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js Express 中间件执行顺序">
 <meta property="og:url" content="http://cuijie.me/2017/01/10/Node-js-Express-中间件执行顺序/index.html">
 <meta property="og:site_name" content="崔杰的博客">
-<meta property="og:description" content="Express里中间件是按照程序里书写顺序执行的。
-今天新建了一个Express程序，添加express-session中间件后，遇到req.session一直是undefined的情况。
-最后发现session中间件写在了路由之后，导致在处理处理时，session还没处理。
-另外，静态文件中间件在路由之前的话，如果public目录下有index.html，在请求/时就直接返回这个文件了，而不会到">
+<meta property="og:description" content="Express里中间件是按照程序里书写顺序执行的。 今天新建了一个Express程序，添加express-session中间件后，遇到req.session一直是undefined的情况。 最后发现session中间件写在了路由之后，导致在处理处理时，session还没处理。 另外，静态文件中间件在路由之前的话，如果public目录下有index.html，在请求/时就直接返回这个文件了，而不会到">
 <meta property="og:updated_time" content="2017-01-10T16:09:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js Express 中间件执行顺序">
-<meta name="twitter:description" content="Express里中间件是按照程序里书写顺序执行的。
-今天新建了一个Express程序，添加express-session中间件后，遇到req.session一直是undefined的情况。
-最后发现session中间件写在了路由之后，导致在处理处理时，session还没处理。
-另外，静态文件中间件在路由之前的话，如果public目录下有index.html，在请求/时就直接返回这个文件了，而不会到">
+<meta name="twitter:description" content="Express里中间件是按照程序里书写顺序执行的。 今天新建了一个Express程序，添加express-session中间件后，遇到req.session一直是undefined的情况。 最后发现session中间件写在了路由之后，导致在处理处理时，session还没处理。 另外，静态文件中间件在路由之前的话，如果public目录下有index.html，在请求/时就直接返回这个文件了，而不会到">
 
 
 
