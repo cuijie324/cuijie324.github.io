@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="总结," />
+  <meta name="keywords" content="cordova," />
 
 
 
@@ -87,22 +87,32 @@
 
 
 
-<meta name="description" content="今天重新整理了博客，一直说要写，但是去年也没坚持下来，或者说没什么好写的。
-最近在学习ES6语法、Node.js、JS测试、RxJS、JS函数式编程等，都是JS相关的。
-《编写可测试的JavaScript》上关于软件的种类说的很好，上面说软件可以分为三类：程序特定（application-specific）、领域特定（domain-specific）、领域独立（domain-independent">
+<meta name="description" content="Cordova iOS插件开发指南
+CDVViewController的viewDidLoad方面里，会实例化用到的每个插件
+注册插件
+调用插件的初始化代码
+插件本身的初始化代码就在plugInitialize方法里。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017.3">
-<meta property="og:url" content="http://cuijie.me/2017/03/05/2017-3/index.html">
+<meta property="og:title" content="Cordova iOS插件初始化">
+<meta property="og:url" content="http://cuijie.me/2017/06/04/Cordova iOS插件初始化/index.html">
 <meta property="og:site_name" content="崔杰的博客">
-<meta property="og:description" content="今天重新整理了博客，一直说要写，但是去年也没坚持下来，或者说没什么好写的。
-最近在学习ES6语法、Node.js、JS测试、RxJS、JS函数式编程等，都是JS相关的。
-《编写可测试的JavaScript》上关于软件的种类说的很好，上面说软件可以分为三类：程序特定（application-specific）、领域特定（domain-specific）、领域独立（domain-independent">
-<meta property="og:updated_time" content="2017-03-05T16:16:00.000Z">
+<meta property="og:description" content="Cordova iOS插件开发指南
+CDVViewController的viewDidLoad方面里，会实例化用到的每个插件
+注册插件
+调用插件的初始化代码
+插件本身的初始化代码就在plugInitialize方法里。">
+<meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/cordova%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%961.jpg">
+<meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/cordova%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%962.png">
+<meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/cordova%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%963.png">
+<meta property="og:updated_time" content="2017-06-04T16:10:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017.3">
-<meta name="twitter:description" content="今天重新整理了博客，一直说要写，但是去年也没坚持下来，或者说没什么好写的。
-最近在学习ES6语法、Node.js、JS测试、RxJS、JS函数式编程等，都是JS相关的。
-《编写可测试的JavaScript》上关于软件的种类说的很好，上面说软件可以分为三类：程序特定（application-specific）、领域特定（domain-specific）、领域独立（domain-independent">
+<meta name="twitter:title" content="Cordova iOS插件初始化">
+<meta name="twitter:description" content="Cordova iOS插件开发指南
+CDVViewController的viewDidLoad方面里，会实例化用到的每个插件
+注册插件
+调用插件的初始化代码
+插件本身的初始化代码就在plugInitialize方法里。">
+<meta name="twitter:image" content="http://7xt06d.com2.z0.glb.clouddn.com/cordova%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%961.jpg">
 
 
 
@@ -130,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://cuijie.me/2017/03/05/2017-3/"/>
+  <link rel="canonical" href="http://cuijie.me/2017/06/04/Cordova iOS插件初始化/"/>
 
 
 
 
 
-  <title> 2017.3 | 崔杰的博客 </title>
+  <title> Cordova iOS插件初始化 | 崔杰的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -285,7 +295,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://cuijie.me/2017/03/05/2017-3/">
+    <link itemprop="mainEntityOfPage" href="http://cuijie.me/2017/06/04/Cordova iOS插件初始化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijie">
@@ -306,7 +316,7 @@
             
             
               
-                2017.3
+                Cordova iOS插件初始化
               
             
           </h1>
@@ -321,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T23:58:04+08:00">
-                2017-03-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-04T23:46:30+08:00">
+                2017-06-04
               </time>
             
 
@@ -344,8 +354,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/总结/" itemprop="url" rel="index">
-                    <span itemprop="name">总结</span>
+                  <a href="/categories/移动端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/移动端开发/cordova/" itemprop="url" rel="index">
+                    <span itemprop="name">cordova</span>
                   </a>
                 </span>
 
@@ -362,8 +383,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/05/2017-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/05/2017-3/" itemprop="commentCount"></span>
+                <a href="/2017/06/04/Cordova iOS插件初始化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/04/Cordova iOS插件初始化/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -389,11 +410,11 @@
       
 
       
-        <p>今天重新整理了博客，一直说要写，但是去年也没坚持下来，或者说没什么好写的。</p>
-<p>最近在学习ES6语法、Node.js、JS测试、RxJS、JS函数式编程等，都是JS相关的。</p>
-<p>《编写可测试的JavaScript》上关于软件的种类说的很好，上面说软件可以分为三类：程序特定（application-specific）、领域特定（domain-specific）、领域独立（domain-independent）。一个典型的应用程序由20%的通用组件和65%的与具体领域有关的可重用组件构成，剩下的才是与具体应用程序相关的代码。</p>
-<p>最近工作上，大量使用了两个比较好的库：lodash和async，一些常见的操作都不用自己写了，代码也好看多了。</p>
-<p>接下来要搞定JS测试。</p>
+        <p><a href="http://cordova.apache.org/docs/en/latest/guide/platforms/ios/plugin.html" title="iOS Plugin Development Guide" target="_blank" rel="external">Cordova iOS插件开发指南</a></p>
+<p>CDVViewController的viewDidLoad方面里，会实例化用到的每个插件<br><img src="http://7xt06d.com2.z0.glb.clouddn.com/cordova%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%961.jpg" alt="viewDiload方法" title="实例化所有插件"></p>
+<p>注册插件<br><img src="http://7xt06d.com2.z0.glb.clouddn.com/cordova%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%962.png" alt="getCommandInstance" title="注册插件"></p>
+<p>调用插件的初始化代码<br><img src="http://7xt06d.com2.z0.glb.clouddn.com/cordova%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%963.png" alt="registerPlugin" title="调用插件的初始化代码"></p>
+<p>插件本身的初始化代码就在<code>plugInitialize</code>方法里。</p>
 
       
     </div>
@@ -417,7 +438,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/总结/" rel="tag"># 总结</a>
+            <a href="/tags/cordova/" rel="tag"># cordova</a>
           
         </div>
       
@@ -453,10 +474,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/03/05/2017-3/"
-     data-title="2017.3"
+        <div class="ds-share flat" data-thread-key="2017/06/04/Cordova iOS插件初始化/"
+     data-title="Cordova iOS插件初始化"
      data-content=""
-     data-url="http://cuijie.me/2017/03/05/2017-3/">
+     data-url="http://cuijie.me/2017/06/04/Cordova iOS插件初始化/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -483,8 +504,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/05/2017-3/"
-           data-title="2017.3" data-url="http://cuijie.me/2017/03/05/2017-3/">
+      <div class="ds-thread" data-thread-key="2017/06/04/Cordova iOS插件初始化/"
+           data-title="Cordova iOS插件初始化" data-url="http://cuijie.me/2017/06/04/Cordova iOS插件初始化/">
       </div>
     
   </div>
@@ -535,7 +556,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -546,7 +567,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
