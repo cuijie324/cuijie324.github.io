@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="BI," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -87,19 +87,21 @@
 
 
 
-<meta name="description" content="中间有三个并行的过程，第一个关注技术，第二个关注数据，第三个关注BI应用。">
-<meta name="keywords" content="BI">
+<meta name="description" content="JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。 基本知识IEEE 754标准：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。 双精度浮点数表示双精度浮点数格式 浮点数使用科学计数法表示，分为符号位s、指数位e、小数位f三部分。64位浮点数中每部分分别占1位、11位、52位。 科学计数法要按">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kimball DW&#x2F;BI生命周期">
-<meta property="og:url" content="http://cuijie.me/2016/11/12/Kimball-DW-BI生命周期/index.html">
+<meta property="og:title" content="JavaScript 数字类型">
+<meta property="og:url" content="http://cuijie.me/2017/07/30/JavaScript-数字类型/index.html">
 <meta property="og:site_name" content="崔杰的博客">
-<meta property="og:description" content="中间有三个并行的过程，第一个关注技术，第二个关注数据，第三个关注BI应用。">
-<meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/kimball%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
-<meta property="og:updated_time" content="2016-11-11T16:57:02.000Z">
+<meta property="og:description" content="JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。 基本知识IEEE 754标准：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。 双精度浮点数表示双精度浮点数格式 浮点数使用科学计数法表示，分为符号位s、指数位e、小数位f三部分。64位浮点数中每部分分别占1位、11位、52位。 科学计数法要按">
+<meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE754.png">
+<meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7543.png">
+<meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7542.png">
+<meta property="og:updated_time" content="2017-07-30T01:40:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kimball DW&#x2F;BI生命周期">
-<meta name="twitter:description" content="中间有三个并行的过程，第一个关注技术，第二个关注数据，第三个关注BI应用。">
-<meta name="twitter:image" content="http://7xt06d.com2.z0.glb.clouddn.com/kimball%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
+<meta name="twitter:title" content="JavaScript 数字类型">
+<meta name="twitter:description" content="JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。 基本知识IEEE 754标准：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。 双精度浮点数表示双精度浮点数格式 浮点数使用科学计数法表示，分为符号位s、指数位e、小数位f三部分。64位浮点数中每部分分别占1位、11位、52位。 科学计数法要按">
+<meta name="twitter:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE754.png">
 
 
 
@@ -127,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://cuijie.me/2016/11/12/Kimball-DW-BI生命周期/"/>
+  <link rel="canonical" href="http://cuijie.me/2017/07/30/JavaScript-数字类型/"/>
 
 
 
 
 
-  <title> Kimball DW/BI生命周期 | 崔杰的博客 </title>
+  <title> JavaScript 数字类型 | 崔杰的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -282,7 +284,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://cuijie.me/2016/11/12/Kimball-DW-BI生命周期/">
+    <link itemprop="mainEntityOfPage" href="http://cuijie.me/2017/07/30/JavaScript-数字类型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijie">
@@ -303,7 +305,7 @@
             
             
               
-                Kimball DW/BI生命周期
+                JavaScript 数字类型
               
             
           </h1>
@@ -318,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-12T00:53:54+08:00">
-                2016-11-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T08:51:23+08:00">
+                2017-07-30
               </time>
             
 
@@ -341,8 +343,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/BI/" itemprop="url" rel="index">
-                    <span itemprop="name">BI</span>
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
                   </a>
                 </span>
 
@@ -352,8 +354,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/BI/理论/" itemprop="url" rel="index">
-                    <span itemprop="name">理论</span>
+                  <a href="/categories/Node-js/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -370,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/11/12/Kimball-DW-BI生命周期/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/12/Kimball-DW-BI生命周期/" itemprop="commentCount"></span>
+                <a href="/2017/07/30/JavaScript-数字类型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/30/JavaScript-数字类型/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -397,7 +399,26 @@
       
 
       
-        <p><img src="http://7xt06d.com2.z0.glb.clouddn.com/kimball%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="kimball DW/BI生命周期图例"><br>中间有三个并行的过程，第一个关注技术，第二个关注数据，第三个关注BI应用。</p>
+        <p>JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。</p>
+<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p><a href="http://homepages.math.uic.edu/~jan/mcs471/Lec3/ieee754.pd" target="_blank" rel="external">IEEE 754标准</a>：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。</p>
+<h1 id="双精度浮点数表示"><a href="#双精度浮点数表示" class="headerlink" title="双精度浮点数表示"></a>双精度浮点数表示</h1><h2 id="双精度浮点数格式"><a href="#双精度浮点数格式" class="headerlink" title="双精度浮点数格式"></a>双精度浮点数格式</h2><p><img src="http://7xt06d.com2.z0.glb.clouddn.com/IEEE754.png" alt="双精度浮点数格式"></p>
+<p>浮点数使用科学计数法表示，分为符号位s、指数位e、小数位f三部分。64位浮点数中每部分分别占1位、11位、52位。</p>
+<p>科学计数法要按规范写法表示，如<code>12.34 = 1.234 * (10^1)</code>。因为规范表示中，小数位中第一位固定是1，所以这可以固定为1，不需要占用52位的小数位，64位浮点数实际上能表示53位小数位。</p>
+<h2 id="双精度浮点数值计算"><a href="#双精度浮点数值计算" class="headerlink" title="双精度浮点数值计算"></a>双精度浮点数值计算</h2><p>指数位共11位，可以表示0~2047之间的值，但为了表示正负指数，加了一个偏移量<code>bias=1023</code>，指数位实际能表示的指数范围为<code>e-bias=[-1023, 1024]</code>，其中两端的-1023和1024用于表示特殊值。浮点数表示值的公式如下（图片来自<a href="https://segmentfault.com/a/1190000008268668" target="_blank" rel="external">IEEE754 浮点数格式 与 Javascript number 的特性</a>）：</p>
+<p><img src="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7543.png" alt="双精度浮点数值"></p>
+<h1 id="特殊值处理"><a href="#特殊值处理" class="headerlink" title="特殊值处理"></a>特殊值处理</h1><p>Number中有些特殊值，如 NaN、0、正负无穷等，需要特殊表示。如上图，在<code>e=0</code>和<code>e=2047</code>时，根据f是否等于零，分为四种情况，用于表示四种特殊值。下图是标准里说明的计算方法，其实跟上面那个图是一样的。</p>
+<p><img src="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7542.png" alt="双精度浮点数格式"></p>
+<p>其中，e=0并且f!=0时，使用的是非规范表示，小数位没有那个隐藏的1，用于表示一些特别小的数。</p>
+<h1 id="JavaScript-Number里的一些值"><a href="#JavaScript-Number里的一些值" class="headerlink" title="JavaScript Number里的一些值"></a>JavaScript Number里的一些值</h1><p>Number.MAX_VALUE：能呈现的最大浮点数，即小数位全为1，指数位为1023：</p>
+<p><code>(1.11…1) * 2^1023 = (2^53 - 1) * 2^(-52) * 2^1023 = (2^53 - 1) * 2^971 = 1.798 * 10^308</code></p>
+<p>Number.MIN_VALUE：能呈现的最小浮点数，即小数位最后一位为1，指数为为-1022：</p>
+<p><code>(0.00…1) * 2^(-1022) = 2^(-52) * 2^(-1022) = 2^(-1074) = 5 * 10^(-324)</code></p>
+<p>Number.MAX_SAFE_INTEGER：能安全呈现的最大整数，即小数位全为1，指数为52：</p>
+<p><code>(1.11…1) * 2^52 = 2^53 - 1</code></p>
+<p>Number.MIN_SAFE_INTEGER：能安全呈现的最小整数，就是上面的取负数</p>
+<p>Number.EPSILON：机器精度，能表示的比1大的最小数减1：</p>
+<p><code>(1.00…1) -1 = 2^(-52)</code></p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://homepages.math.uic.edu/~jan/mcs471/Lec3/ieee754.pd" target="_blank" rel="external">IEEE 754标准</a><br><a href="http://www.cnblogs.com/kingwolfofsky/archive/2011/07/21/2112299.html" target="_blank" rel="external">浮点数与IEEE 754</a><br><a href="https://segmentfault.com/a/1190000008268668" target="_blank" rel="external">IEEE754 浮点数格式 与 Javascript number 的特性</a></p>
 
       
     </div>
@@ -421,7 +442,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/BI/" rel="tag"># BI</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -434,8 +455,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/07/Kimball的DW-BI架构/" rel="next" title="Kimball的DW/BI架构">
-                <i class="fa fa-chevron-left"></i> Kimball的DW/BI架构
+              <a href="/2017/07/28/如何使用Let-s-Encrypt申请HTTPS证书/" rel="next" title="如何使用Let's Encrypt申请HTTPS证书">
+                <i class="fa fa-chevron-left"></i> 如何使用Let's Encrypt申请HTTPS证书
               </a>
             
           </div>
@@ -443,10 +464,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/02/微信公众号获取用户信息的方式/" rel="prev" title="微信公众号获取用户信息的方式">
-                微信公众号获取用户信息的方式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -500,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xt06d.com2.z0.glb.clouddn.com/avatar.jpg"
@@ -601,6 +627,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本知识"><span class="nav-number">1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#双精度浮点数表示"><span class="nav-number">2.</span> <span class="nav-text">双精度浮点数表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#双精度浮点数格式"><span class="nav-number">2.1.</span> <span class="nav-text">双精度浮点数格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双精度浮点数值计算"><span class="nav-number">2.2.</span> <span class="nav-text">双精度浮点数值计算</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特殊值处理"><span class="nav-number">3.</span> <span class="nav-text">特殊值处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Number里的一些值"><span class="nav-number">4.</span> <span class="nav-text">JavaScript Number里的一些值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -726,9 +768,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'cuijieme';
-      var disqus_identifier = '2016/11/12/Kimball-DW-BI生命周期/';
+      var disqus_identifier = '2017/07/30/JavaScript-数字类型/';
 
-      var disqus_title = "Kimball DW/BI生命周期";
+      var disqus_title = "JavaScript 数字类型";
 
 
       function run_disqus_script(disqus_script) {
