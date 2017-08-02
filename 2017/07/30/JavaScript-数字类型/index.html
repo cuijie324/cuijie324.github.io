@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE754.png">
 <meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7543.png">
 <meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7542.png">
-<meta property="og:updated_time" content="2017-07-30T01:40:18.000Z">
+<meta property="og:updated_time" content="2017-07-30T01:57:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 数字类型">
 <meta name="twitter:description" content="JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。 基本知识IEEE 754标准：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。 双精度浮点数表示双精度浮点数格式 浮点数使用科学计数法表示，分为符号位s、指数位e、小数位f三部分。64位浮点数中每部分分别占1位、11位、52位。 科学计数法要按">
@@ -408,7 +408,7 @@
 <p><img src="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7543.png" alt="双精度浮点数值"></p>
 <h1 id="特殊值处理"><a href="#特殊值处理" class="headerlink" title="特殊值处理"></a>特殊值处理</h1><p>Number中有些特殊值，如 NaN、0、正负无穷等，需要特殊表示。如上图，在<code>e=0</code>和<code>e=2047</code>时，根据f是否等于零，分为四种情况，用于表示四种特殊值。下图是标准里说明的计算方法，其实跟上面那个图是一样的。</p>
 <p><img src="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7542.png" alt="双精度浮点数格式"></p>
-<p>其中，e=0并且f!=0时，使用的是非规范表示，小数位没有那个隐藏的1，用于表示一些特别小的数。</p>
+<p>其中，<code>e=0</code>并且<code>f!=0</code>时，使用的是非规范表示，小数位没有那个隐含的1，用于表示一些特别小的数。</p>
 <h1 id="JavaScript-Number里的一些值"><a href="#JavaScript-Number里的一些值" class="headerlink" title="JavaScript Number里的一些值"></a>JavaScript Number里的一些值</h1><p>Number.MAX_VALUE：能呈现的最大浮点数，即小数位全为1，指数位为1023：</p>
 <p><code>(1.11…1) * 2^1023 = (2^53 - 1) * 2^(-52) * 2^1023 = (2^53 - 1) * 2^971 = 1.798 * 10^308</code></p>
 <p>Number.MIN_VALUE：能呈现的最小浮点数，即小数位最后一位为1，指数为为-1022：</p>
@@ -464,6 +464,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/02/Node-js垃圾回收日志/" rel="prev" title="Node.js垃圾回收日志">
+                Node.js垃圾回收日志 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -542,7 +546,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -553,7 +557,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -564,7 +568,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
