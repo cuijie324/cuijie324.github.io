@@ -87,13 +87,14 @@
 
 
 
-<meta name="description" content="JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。 基本知识IEEE 754标准：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。 双精度浮点数表示双精度浮点数格式 浮点数使用科学计数法表示，分为符号位s、指数位e、小数位f三部分。64位浮点数中每部分分别占1位、11位、52位。 科学计数法要按">
+<meta name="description" content="JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。 基本知识IEEE 754标准：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。 双精度浮点数表示双精度浮点数格式 浮点数使用科学计数法表示，分为符号位s、指数位e、">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 数字类型">
 <meta property="og:url" content="http://cuijie.me/2017/07/30/JavaScript-数字类型/index.html">
 <meta property="og:site_name" content="崔杰的博客">
 <meta property="og:description" content="JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。 基本知识IEEE 754标准：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。 双精度浮点数表示双精度浮点数格式 浮点数使用科学计数法表示，分为符号位s、指数位e、小数位f三部分。64位浮点数中每部分分别占1位、11位、52位。 科学计数法要按">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE754.png">
 <meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7543.png">
 <meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7542.png">
@@ -400,11 +401,11 @@
 
       
         <p>JavaScript的数字类型使用的是双精度浮点型（64位二进制），遵循IEEE754标准。</p>
-<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p><a href="http://homepages.math.uic.edu/~jan/mcs471/Lec3/ieee754.pd" target="_blank" rel="external">IEEE 754标准</a>：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。</p>
+<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p><a href="http://homepages.math.uic.edu/~jan/mcs471/Lec3/ieee754.pd" target="_blank" rel="noopener">IEEE 754标准</a>：标准了定义了单精度浮点数、双精度浮点数，还有扩展精度浮点数，这里只介绍JavaScript使用的双精度浮点数。</p>
 <h1 id="双精度浮点数表示"><a href="#双精度浮点数表示" class="headerlink" title="双精度浮点数表示"></a>双精度浮点数表示</h1><h2 id="双精度浮点数格式"><a href="#双精度浮点数格式" class="headerlink" title="双精度浮点数格式"></a>双精度浮点数格式</h2><p><img src="http://7xt06d.com2.z0.glb.clouddn.com/IEEE754.png" alt="双精度浮点数格式"></p>
 <p>浮点数使用科学计数法表示，分为符号位s、指数位e、小数位f三部分。64位浮点数中每部分分别占1位、11位、52位。</p>
 <p>科学计数法要按规范写法表示，如<code>12.34 = 1.234 * (10^1)</code>。因为规范表示中，小数位中第一位固定是1，所以这可以固定为1，不需要占用52位的小数位，64位浮点数实际上能表示53位小数位。</p>
-<h2 id="双精度浮点数值计算"><a href="#双精度浮点数值计算" class="headerlink" title="双精度浮点数值计算"></a>双精度浮点数值计算</h2><p>指数位共11位，可以表示0~2047之间的值，但为了表示正负指数，加了一个偏移量<code>bias=1023</code>，指数位实际能表示的指数范围为<code>e-bias=[-1023, 1024]</code>，其中两端的-1023和1024用于表示特殊值。浮点数表示值的公式如下（图片来自<a href="https://segmentfault.com/a/1190000008268668" target="_blank" rel="external">IEEE754 浮点数格式 与 Javascript number 的特性</a>）：</p>
+<h2 id="双精度浮点数值计算"><a href="#双精度浮点数值计算" class="headerlink" title="双精度浮点数值计算"></a>双精度浮点数值计算</h2><p>指数位共11位，可以表示0~2047之间的值，但为了表示正负指数，加了一个偏移量<code>bias=1023</code>，指数位实际能表示的指数范围为<code>e-bias=[-1023, 1024]</code>，其中两端的-1023和1024用于表示特殊值。浮点数表示值的公式如下（图片来自<a href="https://segmentfault.com/a/1190000008268668" target="_blank" rel="noopener">IEEE754 浮点数格式 与 Javascript number 的特性</a>）：</p>
 <p><img src="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7543.png" alt="双精度浮点数值"></p>
 <h1 id="特殊值处理"><a href="#特殊值处理" class="headerlink" title="特殊值处理"></a>特殊值处理</h1><p>Number中有些特殊值，如 NaN、0、正负无穷等，需要特殊表示。如上图，在<code>e=0</code>和<code>e=2047</code>时，根据f是否等于零，分为四种情况，用于表示四种特殊值。下图是标准里说明的计算方法，其实跟上面那个图是一样的。</p>
 <p><img src="http://7xt06d.com2.z0.glb.clouddn.com/IEEE7542.png" alt="双精度浮点数格式"></p>
@@ -418,7 +419,7 @@
 <p>Number.MIN_SAFE_INTEGER：能安全呈现的最小整数，就是上面的取负数</p>
 <p>Number.EPSILON：机器精度，能表示的比1大的最小数减1：</p>
 <p><code>(1.00…1) -1 = 2^(-52)</code></p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://homepages.math.uic.edu/~jan/mcs471/Lec3/ieee754.pd" target="_blank" rel="external">IEEE 754标准</a><br><a href="http://www.cnblogs.com/kingwolfofsky/archive/2011/07/21/2112299.html" target="_blank" rel="external">浮点数与IEEE 754</a><br><a href="https://segmentfault.com/a/1190000008268668" target="_blank" rel="external">IEEE754 浮点数格式 与 Javascript number 的特性</a></p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://homepages.math.uic.edu/~jan/mcs471/Lec3/ieee754.pd" target="_blank" rel="noopener">IEEE 754标准</a><br><a href="http://www.cnblogs.com/kingwolfofsky/archive/2011/07/21/2112299.html" target="_blank" rel="noopener">浮点数与IEEE 754</a><br><a href="https://segmentfault.com/a/1190000008268668" target="_blank" rel="noopener">IEEE754 浮点数格式 与 Javascript number 的特性</a></p>
 
       
     </div>
@@ -546,7 +547,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -557,7 +558,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -568,7 +569,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

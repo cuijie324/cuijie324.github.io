@@ -87,13 +87,14 @@
 
 
 
-<meta name="description" content="1. 微信网页开发-网页授权获取用户信息如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息，进而实现业务逻辑。不同的公众号类型具备不同的接口权限。 只有服务号支持网页授权获取用户信息。有两种scope，snsapi_userinfo和snsapi_base。  以snsapi_base为scope发起的网页授权，是用来获取进入页面的用户的openid的，并且是">
+<meta name="description" content="1. 微信网页开发-网页授权获取用户信息如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息，进而实现业务逻辑。不同的公众号类型具备不同的接口权限。 只有服务号支持网页授权获取用户信息。有两种scope，snsapi_userinfo和snsapi_base。  以snsapi_ba">
 <meta name="keywords" content="公众号开发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信公众号获取用户信息的方式">
 <meta property="og:url" content="http://cuijie.me/2016/12/02/微信公众号获取用户信息的方式/index.html">
 <meta property="og:site_name" content="崔杰的博客">
 <meta property="og:description" content="1. 微信网页开发-网页授权获取用户信息如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息，进而实现业务逻辑。不同的公众号类型具备不同的接口权限。 只有服务号支持网页授权获取用户信息。有两种scope，snsapi_userinfo和snsapi_base。  以snsapi_base为scope发起的网页授权，是用来获取进入页面的用户的openid的，并且是">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83%E6%9D%83%E9%99%90.png">
 <meta property="og:image" content="http://7xt06d.com2.z0.glb.clouddn.com/%E9%80%9A%E8%BF%87openid%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.png">
 <meta property="og:updated_time" content="2016-12-01T16:45:14.000Z">
@@ -398,16 +399,16 @@
       
 
       
-        <h2 id="1-微信网页开发-网页授权获取用户信息"><a href="#1-微信网页开发-网页授权获取用户信息" class="headerlink" title="1. 微信网页开发-网页授权获取用户信息"></a>1. <a href="https://mp.weixin.qq.com/wiki?id=mp1445241432&amp;lang=zh_CN" target="_blank" rel="external">微信网页开发-网页授权获取用户信息</a></h2><p>如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息，进而实现业务逻辑。<br>不同的公众号类型具备不同的接口<a href="http://mp.weixin.qq.com/wiki/13/8d4957b72037e3308a0ca1b21f25ae8d.html" target="_blank" rel="external">权限</a>。<br><img src="http://7xt06d.com2.z0.glb.clouddn.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83%E6%9D%83%E9%99%90.png" alt="公众号权限" title="公众号权限"></p>
+        <h2 id="1-微信网页开发-网页授权获取用户信息"><a href="#1-微信网页开发-网页授权获取用户信息" class="headerlink" title="1. 微信网页开发-网页授权获取用户信息"></a>1. <a href="https://mp.weixin.qq.com/wiki?id=mp1445241432&amp;lang=zh_CN" target="_blank" rel="noopener">微信网页开发-网页授权获取用户信息</a></h2><p>如果用户在微信客户端中访问第三方网页，公众号可以通过微信网页授权机制，来获取用户基本信息，进而实现业务逻辑。<br>不同的公众号类型具备不同的接口<a href="http://mp.weixin.qq.com/wiki/13/8d4957b72037e3308a0ca1b21f25ae8d.html" target="_blank" rel="noopener">权限</a>。<br><img src="http://7xt06d.com2.z0.glb.clouddn.com/%E5%85%AC%E4%BC%97%E5%8F%B7%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83%E6%9D%83%E9%99%90.png" alt="公众号权限" title="公众号权限"></p>
 <p>只有服务号支持网页授权获取用户信息。有两种scope，snsapi_userinfo和snsapi_base。</p>
 <ul>
 <li>以snsapi_base为scope发起的网页授权，是用来获取进入页面的用户的openid的，并且是静默授权并自动跳转到回调页的。用户感知的就是直接进入了回调页（往往是业务页面）。</li>
 <li>snsapi_userinfo需要用户授权，可以获取用户的详细信息。</li>
 </ul>
 <p>注：静默授权不需要用户同意，只要用户进入了我们开发的网页就可以获取openid。</p>
-<h2 id="2-微信用户管理接口"><a href="#2-微信用户管理接口" class="headerlink" title="2. 微信用户管理接口"></a>2. <a href="https://mp.weixin.qq.com/wiki?id=mp1445241432&amp;lang=zh_CN" target="_blank" rel="external">微信用户管理接口</a></h2><p>获取用户基本信息(UnionID机制)：在关注者与公众号产生消息交互后，公众号可获得关注者的OpenID（加密后的微信号，每个用户对每个公众号的OpenID是唯一的。对于不同公众号，同一用户的openid不同）。公众号可通过本接口来根据OpenID获取用户基本信息，包括昵称、头像、性别、所在城市、语言和关注时间。</p>
+<h2 id="2-微信用户管理接口"><a href="#2-微信用户管理接口" class="headerlink" title="2. 微信用户管理接口"></a>2. <a href="https://mp.weixin.qq.com/wiki?id=mp1445241432&amp;lang=zh_CN" target="_blank" rel="noopener">微信用户管理接口</a></h2><p>获取用户基本信息(UnionID机制)：在关注者与公众号产生消息交互后，公众号可获得关注者的OpenID（加密后的微信号，每个用户对每个公众号的OpenID是唯一的。对于不同公众号，同一用户的openid不同）。公众号可通过本接口来根据OpenID获取用户基本信息，包括昵称、头像、性别、所在城市、语言和关注时间。</p>
 <p>注：用户没关注时，只要有openid仍然可以获得unionid，只是没有具体信息，下面是微信调试页面返回的数据<br><img src="http://7xt06d.com2.z0.glb.clouddn.com/%E9%80%9A%E8%BF%87openid%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.png" alt="获取用户信息" title="获取用户信息"></p>
-<h2 id="3-公众号第三方平台代公众号发起网页授权"><a href="#3-公众号第三方平台代公众号发起网页授权" class="headerlink" title="3. 公众号第三方平台代公众号发起网页授权"></a>3. <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419318590&amp;token=&amp;lang=zh_CN" target="_blank" rel="external">公众号第三方平台代公众号发起网页授权</a></h2><p>跟网页授权类似，参数不同，需要同时提供公众号的appid和服务方的appid。</p>
+<h2 id="3-公众号第三方平台代公众号发起网页授权"><a href="#3-公众号第三方平台代公众号发起网页授权" class="headerlink" title="3. 公众号第三方平台代公众号发起网页授权"></a>3. <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419318590&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">公众号第三方平台代公众号发起网页授权</a></h2><p>跟网页授权类似，参数不同，需要同时提供公众号的appid和服务方的appid。</p>
 
       
     </div>
@@ -535,7 +536,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -546,7 +547,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -557,7 +558,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

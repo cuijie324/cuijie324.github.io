@@ -91,6 +91,7 @@
 <meta property="og:title" content="崔杰的博客">
 <meta property="og:url" content="http://cuijie.me/page/2/index.html">
 <meta property="og:site_name" content="崔杰的博客">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="崔杰的博客">
 
@@ -277,6 +278,170 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://cuijie.me/2016/11/07/Kimball的DW-BI架构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cuijie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7xt06d.com2.z0.glb.clouddn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="崔杰的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/07/Kimball的DW-BI架构/" itemprop="url">
+                  Kimball的DW/BI架构
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-07T23:55:51+08:00">
+                2016-11-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BI/" itemprop="url" rel="index">
+                    <span itemprop="name">BI</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BI/理论/" itemprop="url" rel="index">
+                    <span itemprop="name">理论</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/11/07/Kimball的DW-BI架构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/07/Kimball的DW-BI架构/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>摘自《数据仓库工具箱：维度建模权威指南》，分为四部分：操作型源系统、ETL系统、数据展现和商业智能应用<br><img src="http://7xt06d.com2.z0.glb.clouddn.com/kimball.png" alt="kimball的DW/BI架构"></p>
+<p>展现区用于组织、存储数据，支持用户、报表制作者以及其他分析型商业智能应用的查询。<br>商业智能应用泛指为商业用户提供利用展现区制定分析决策的应用。</p>
+<h2 id="星型模式与OLAP数据库"><a href="#星型模式与OLAP数据库" class="headerlink" title="星型模式与OLAP数据库"></a>星型模式与OLAP数据库</h2><p>在关系数据库管理系统中实现的维度模型称为星型模式，在多维数据库环境中实现的维度模型通常称为联机分析处理（OLAP）多维数据库。</p>
+<p>构建于关系数据库之上的星型模式是建立OLAP多维数据库的良好物理基础。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://cuijie.me/2016/11/07/Pentaho-Business-Analytics-Platform迁移到MySQL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -399,9 +564,9 @@
           
             <p>Pentaho biserver-ce-6.1默认使用HSQLDB，可以选择迁移到MySQL或其他数据库，下面是三篇教程：</p>
 <ul>
-<li><a href="https://help.pentaho.com/Documentation/6.1/0F0/0P0/030/020" target="_blank" rel="external">Use MySQL as Your Repository Database</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_76a8411a01010x4r.html" target="_blank" rel="external">pentaho BI Server-4.5 迁移到mysql详解</a></li>
-<li><a href="http://www.cnblogs.com/JackyTecblog/archive/2012/10/30/2747165.html" target="_blank" rel="external">pentaho配置详解，mysql版（biserver-ce-4.5.0-stable.zip)</a></li>
+<li><a href="https://help.pentaho.com/Documentation/6.1/0F0/0P0/030/020" target="_blank" rel="noopener">Use MySQL as Your Repository Database</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_76a8411a01010x4r.html" target="_blank" rel="noopener">pentaho BI Server-4.5 迁移到mysql详解</a></li>
+<li><a href="http://www.cnblogs.com/JackyTecblog/archive/2012/10/30/2747165.html" target="_blank" rel="noopener">pentaho配置详解，mysql版（biserver-ce-4.5.0-stable.zip)</a></li>
 </ul>
 <p>其实迁移没什么用，还是先学会用吧~</p>
 
@@ -863,7 +1028,7 @@
         
           
             <p>Hello world!</p>
-<p>使用了新模版<a href="http://theme-next.iissnan.com/" title="Next" target="_blank" rel="external">Next</a>，看起来很漂亮</p>
+<p>使用了新模版<a href="http://theme-next.iissnan.com/" title="Next" target="_blank" rel="noopener">Next</a>，看起来很漂亮</p>
 
           
         
@@ -944,7 +1109,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -955,7 +1120,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -966,7 +1131,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
