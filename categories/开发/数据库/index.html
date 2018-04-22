@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mongodb,mongoose," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -87,18 +87,13 @@
 
 
 
-<meta name="description" content="在使用Mongoose连接MongoDB数据库时遇到 not master and slaveOk=false 问题，找到的解决方法：  方式1：查询时使用read(‘secondary’)  123Model.findOne(&amp;#123;&amp;#125;).read(&amp;apos;secondary">
-<meta name="keywords" content="mongodb,mongoose">
-<meta property="og:type" content="article">
-<meta property="og:title" content="mongodb not master and slaveOk=false">
-<meta property="og:url" content="http://cuijie.me/2018/04/22/mongodb-not-master-and-slaveOk-false/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="崔杰的博客">
+<meta property="og:url" content="http://cuijie.me/categories/开发/数据库/index.html">
 <meta property="og:site_name" content="崔杰的博客">
-<meta property="og:description" content="在使用Mongoose连接MongoDB数据库时遇到 not master and slaveOk=false 问题，找到的解决方法：  方式1：查询时使用read(‘secondary’)  123Model.findOne(&amp;#123;&amp;#125;).read(&amp;apos;secondary&amp;apos;).exec((err, result) =&amp;gt; &amp;#123;    console.l">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-22T14:47:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mongodb not master and slaveOk=false">
-<meta name="twitter:description" content="在使用Mongoose连接MongoDB数据库时遇到 not master and slaveOk=false 问题，找到的解决方法：  方式1：查询时使用read(‘secondary’)  123Model.findOne(&amp;#123;&amp;#125;).read(&amp;apos;secondary&amp;apos;).exec((err, result) =&amp;gt; &amp;#123;    console.l">
+<meta name="twitter:title" content="崔杰的博客">
 
 
 
@@ -126,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://cuijie.me/2018/04/22/mongodb-not-master-and-slaveOk-false/"/>
+  <link rel="canonical" href="http://cuijie.me/categories/开发/数据库/"/>
 
 
 
 
 
-  <title> mongodb not master and slaveOk=false | 崔杰的博客 </title>
+  <title> 分类: 数据库 | 崔杰的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -167,7 +162,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,205 +266,47 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://cuijie.me/2018/04/22/mongodb-not-master-and-slaveOk-false/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cuijie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://7xt06d.com2.z0.glb.clouddn.com/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="崔杰的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                mongodb not master and slaveOk=false
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T22:26:30+08:00">
-                2018-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开发/" itemprop="url" rel="index">
-                    <span itemprop="name">开发</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开发/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/22/mongodb-not-master-and-slaveOk-false/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/04/22/mongodb-not-master-and-slaveOk-false/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>在使用Mongoose连接MongoDB数据库时遇到 <em>not master and slaveOk=false</em> 问题，找到的解决方法：</p>
-<ul>
-<li>方式1：查询时使用read(‘secondary’)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Model.findOne(&#123;&#125;).read(&apos;secondary&apos;).exec((err, result) =&gt; &#123;</span><br><span class="line">    console.log(&apos;return&apos;, err, result);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>方法2：连接字符串加参数 ?readPreference=secondary</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongodb://ip/dbname?readPreference=secondary</span><br></pre></td></tr></table></figure>
-
-      
+  <section id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        数据库
+        <small>分类</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-
-      
-    </div>
-
-    <div>
-      
+            <a class="post-title-link" href="/2018/04/22/mongodb-not-master-and-slaveOk-false/" itemprop="url">
+              
+                <span itemprop="name">mongodb not master and slaveOk=false</span>
+              
+            </a>
         
+      </h1>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-04-22T22:26:30+08:00"
+              content="2018-04-22" >
+          04-22
+        </time>
+      </div>
 
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/mongodb/" rel="tag"># mongodb</a>
-          
-            <a href="/tags/mongoose/" rel="tag"># mongoose</a>
-          
-        </div>
-      
-
-      
-        
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/03/13/Nest介绍/" rel="next" title="Nest介绍">
-                <i class="fa fa-chevron-left"></i> Nest介绍
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+
 
           
           </div>
@@ -477,12 +314,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div id="hypercomments_widget"></div>
-    
-  </div>
-
 
         </div>
         
@@ -708,10 +539,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 
@@ -736,8 +563,6 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 102462, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
-		
-		_hcwp.push({widget:"Stream", widget_id: 102462, xid: "2018/04/22/mongodb-not-master-and-slaveOk-false/"});
 		
 
 		(function() {
