@@ -87,7 +87,7 @@
 
 
 
-<meta name="description" content="Express里中间件是按照程序里书写顺序执行的。 今天新建了一个Express程序，添加express-session中间件后，遇到req.session一直是undefined的情况。 最后发现session中间件写在了路由之后，导致在处理处理时，session还没处理。 另外，静态文件中间件在路由之前的话，如果p">
+<meta name="description" content="Express里中间件是按照程序里书写顺序执行的。 今天新建了一个Express程序，添加express-session中间件后，遇到req.session一直是undefined的情况。 最后发现session中间件写在了路由之后，导致在处理处理时，session还没处理。 另外，静态文件中间件在路由之前的话，如果public目录下有index.html，在请求/时就直接返回这个文件了，而不会到">
 <meta name="keywords" content="Node.js,Express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js Express 中间件执行顺序">
@@ -517,7 +517,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -528,7 +528,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -539,7 +539,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
